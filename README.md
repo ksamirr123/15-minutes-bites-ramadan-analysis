@@ -31,3 +31,7 @@ to identify top revenue drivers and peak demand patterns.
 <img width="393" height="278" alt="image" src="https://github.com/user-attachments/assets/4c51c2e8-fb80-40c3-9c78-97d753782c52" />
 
 
+## Dashboard
+<img width="2430" height="1519" alt="15MB_Dashboard" src="https://github.com/user-attachments/assets/c9f7cde3-0c47-4ee9-bc22-1769e1f639f7" />
+
+
