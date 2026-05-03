@@ -1,0 +1,25 @@
+# Key Findings — 15 Minutes Bites
+
+## Finding 1: Revenue Concentration
+- 3 out of 15 menu items drove 70%+ of total revenue
+- Remaining 12 items contributed less than 30% combined
+- Classic 80/20 rule in action
+
+## Finding 2: Demand Spike
+- Clear 30-minute demand window before iftar every day
+- Orders in this window were 3x higher than any other period
+- Predictable and consistent across all days analyzed
+
+## Finding 3: Sehri vs Iftar
+- Iftar window significantly outperformed sehri
+- Sehri orders were lower but more consistent throughout window
+
+## Business Decisions Made
+1. Kitchen restructured prep around top 3 platters
+2. Delivery riders pre-positioned during iftar window
+3. Low-performing items deprioritized from active promotion
+
+## PM Translation
+- Top 3 items = feature prioritization (focus on what drives value)
+- Iftar spike = rollout timing insight (when to push notifications)
+- Dashboard = self-service analytics for non-technical stakeholders
