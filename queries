@@ -1,0 +1,66 @@
+---
+
+## 📊 SQL Queries
+
+### 1. Revenue by Item
+```sql
+SELECT 
+    item_name,
+    COUNT(*) AS total_orders,
+    SUM(price) AS total_revenue,
+    ROUND(
+        SUM(price) / (SELECT SUM(price) FROM orders) * 100, 1
+    ) AS revenue_pct
+FROM orders
+GROUP BY item_name
+ORDER BY total_revenue DESC;
+```
+**Finding:** Top 3 items = 70%+ of total revenue
+
+---
+
+### 2. Hourly Demand — Iftar Spike
+```sql
+SELECT 
+    HOUR(order_time) AS order_hour,
+    COUNT(*) AS total_orders
+FROM orders
+GROUP BY HOUR(order_time)
+ORDER BY total_orders DESC;
+```
+**Finding:** Clear 30-minute demand spike before iftar daily
+
+---
+
+### 3. Sehri vs Iftar Window
+```sql
+SELECT 
+    CASE 
+        WHEN HOUR(order_time) BETWEEN 3 AND 5 
+            THEN 'Sehri Window'
+        WHEN HOUR(order_time) BETWEEN 18 AND 20 
+            THEN 'Iftar Window'
+        ELSE 'Off-Peak'
+    END AS time_window,
+    COUNT(*) AS total_orders,
+    SUM(price) AS total_revenue
+FROM orders
+GROUP BY time_window
+ORDER BY total_orders DESC;
+```
+**Finding:** Iftar window had 3x more orders than sehri
+
+---
+
+## 📈 Dashboard (Power BI)
+Built an interactive dashboard for non-technical stakeholders covering:
+- Total orders and revenue (KPI cards)
+- Top items by volume and revenue (bar chart)
+- Hourly demand heatmap (peak period visual)
+- Sehri vs Iftar window comparison
+
+---
+
+## 🎯 Key Takeaway
+Data is only valuable when it leads to a decision.  
+This project delivered two direct operational changes — not just charts.
